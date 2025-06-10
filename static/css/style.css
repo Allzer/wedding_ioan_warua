@@ -148,10 +148,21 @@
         
         .schedule-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
             max-width: 1000px;
             margin: 0 auto;
+        }
+
+        .first-row {
+            grid-template-columns: repeat(3, 1fr);
+            margin-bottom: 30px;
+        }
+
+        .second-row {
+            grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+            justify-content: center; /* Центрирование по горизонтали */
+            width: 66.66%; /* Ширина как у двух карточек + промежуток */
+            margin: 0 auto; /* Автоматические отступы по бокам для центрирования */
         }
         
         .schedule-card {
@@ -162,6 +173,26 @@
             transition: transform 0.3s ease;
             position: relative;
             overflow: hidden;
+        }
+
+        @media (max-width: 1000px) {
+            .first-row {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+            .second-row {
+                width: 100%;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 700px) {
+            .schedule-grid {
+                grid-template-columns: 1fr;
+            }
+            .first-row, .second-row {
+                display: flex;
+                flex-direction: column;
+            }
         }
         
         .schedule-card:hover {
