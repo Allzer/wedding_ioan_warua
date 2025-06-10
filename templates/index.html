@@ -1,33 +1,204 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Website</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Иван и Варвара | Свадьба</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#details">Details</a></li>
-                <li><a href="#rsvp">RSVP</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Варвара <span>&</span> Иван</h1>
+            <div class="hero-date">1 Августа 2025</div>
+            
+            <div class="countdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">ДНЕЙ</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">ЧАСОВ</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">МИНУТ</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">СЕКУНД</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <main>
-        <section id="home" class="hero">
-            <h1>Ioan & Warua</h1>
-            <p class="date">Save the Date</p>
-            <p class="location">Location, Date</p>
-        </section>
-    </main>
+    <!-- Schedule Section -->
+    <section class="section schedule">
+        <div class="container">
+            <div class="section-title">
+                <h2>Расписание дня</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">15:00</div>
+                    <div class="timeline-content">
+                        <h3>Церемония</h3>
+                        <p>Торжественная регистрация брака в атмосфере любви и гармонии</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-time">16:30</div>
+                    <div class="timeline-content">
+                        <h3>Фуршет</h3>
+                        <p>Легкие закуски и напитки в ожидании праздничного ужина</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-time">18:00</div>
+                    <div class="timeline-content">
+                        <h3>Праздничный ужин</h3>
+                        <p>Торжественный банкет с изысканными блюдами и развлечениями</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-time">22:00</div>
+                    <div class="timeline-content">
+                        <h3>Танцы</h3>
+                        <p>Вечер танцев под любимые мелодии и живой звук</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 Wedding Website. All rights reserved.</p>
+    <!-- Gifts Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Пожелания</h2>
+            </div>
+            
+            <div class="gifts-grid">
+                <div class="gift-card">
+                    <div class="gift-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Подарки</h3>
+                    <p>Ваши поздравления - лучший подарок для нас! Если вы хотите сделать материальный подарок, мы будем рады конверту.</p>
+                </div>
+                
+                <div class="gift-card">
+                    <div class="gift-icon">
+                        <i class="fas fa-flower"></i>
+                    </div>
+                    <h3>Цветы</h3>
+                    <p>Чтобы продлить цветочное настроение нашего праздника, вы можете поддержать нашего флориста:</p>
+                    <div class="qr-code">
+                        QR-код для перевода<br>(замените на реальный)
+                    </div>
+                    <p>Каждую неделю мы будем получать свежий букет!</p>
+                </div>
+                
+                <div class="gift-card">
+                    <div class="gift-icon">
+                        <i class="fas fa-child"></i>
+                    </div>
+                    <h3>Дети и дресс-код</h3>
+                    <p>Дети - желанные гости на нашем празднике! Дресс-код: вечерние наряды, но строгих ограничений нет. Главное - чтобы вам было комфортно.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="section rsvp">
+        <div class="container">
+            <div class="section-title">
+                <h2>Подтвердите присутствие</h2>
+            </div>
+            
+            <div class="rsvp-text">
+                <p>Пожалуйста, сообщите нам о вашем присутствии до 1 июля 2024 года.</p>
+                <p>В форме вы сможете указать, придете ли вы с парой, и пожелаете ли сделать нам сюрприз.</p>
+            </div>
+            
+            <a href="https://forms.google.com/ваша_форма" class="btn" target="_blank">ПОДТВЕРДИТЬ ПРИСУТСТВИЕ</a>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Место проведения</h2>
+            </div>
+            
+            <div class="location-grid">
+                <div class="location-info">
+                    <h3>Ресторан "Изумруд"</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Москва, Пресненская набережная, 12</p>
+                    <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                    <p>Регистрация и празднование пройдут в одном месте - прекрасном ресторане с видом на Москву-реку.</p>
+                    
+                    <a href="https://disk.yandex.ru/ваша_ссылка" class="yandex-disk" target="_blank">
+                        <i class="fab fa-yandex"></i> Ссылка на Яндекс.Диск с подробностями
+                    </a>
+                </div>
+                
+                <div class="location-map">
+                    Карта с расположением ресторана (замените на реальную карту)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="names">Варвара & Иван</div>
+            <p>1 Августа 2025 года</p>
+        </div>
     </footer>
+
+    <script>
+        // Обратный отсчет
+        function updateCountdown() {
+            const weddingDate = new Date('July 15, 2024 15:00:00').getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').innerText = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Параллакс эффект для героя
+        document.addEventListener('DOMContentLoaded', function() {
+            const hero = document.querySelector('.hero');
+            
+            window.addEventListener('scroll', function() {
+                const scrollPosition = window.pageYOffset;
+                hero.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+            });
+        });
+    </script>
 </body>
 </html>
