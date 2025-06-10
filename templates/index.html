@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Иван и Варвара | Свадьба</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 
@@ -170,25 +170,38 @@
     </footer>
 
     <script>
-        // Обратный отсчет
+        // Обратный отсчет до 1 августа 2025 года в 00:00
         function updateCountdown() {
-            const weddingDate = new Date('July 15, 2024 15:00:00').getTime();
+            // Устанавливаем дату свадьбы: 1 августа 2025 года, 00:00:00
+            const weddingDate = new Date(2025, 7, 1, 0, 0, 0).getTime();
             const now = new Date().getTime();
             const distance = weddingDate - now;
             
+            // Если дата уже прошла
+            if (distance < 0) {
+                document.getElementById('days').innerText = "00";
+                document.getElementById('hours').innerText = "00";
+                document.getElementById('minutes').innerText = "00";
+                document.getElementById('seconds').innerText = "00";
+                return;
+            }
+            
+            // Расчет дней, часов, минут, секунд
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
             
+            // Обновление значений на странице
             document.getElementById('days').innerText = days.toString().padStart(2, '0');
             document.getElementById('hours').innerText = hours.toString().padStart(2, '0');
             document.getElementById('minutes').innerText = minutes.toString().padStart(2, '0');
             document.getElementById('seconds').innerText = seconds.toString().padStart(2, '0');
         }
         
+        // Обновление каждую секунду
         setInterval(updateCountdown, 1000);
-        updateCountdown();
+        updateCountdown(); // Инициализация сразу при загрузке
         
         // Параллакс эффект для героя
         document.addEventListener('DOMContentLoaded', function() {
