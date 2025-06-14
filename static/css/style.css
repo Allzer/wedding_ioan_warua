@@ -391,7 +391,7 @@
         .footer {
             padding: 40px 0;
             text-align: center;
-            background: var(--dark-green);
+            background: #146152;
             color: rgba(255, 255, 255, 0.7);
             font-size: 14px;
         }
