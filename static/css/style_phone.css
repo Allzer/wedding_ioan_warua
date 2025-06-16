@@ -33,7 +33,6 @@
         }
         
         .section {
-            margin-top: 210px;
             padding: 80px 0;
             position: relative;
         }
@@ -333,6 +332,7 @@
         }
         
         .location-info h3 {
+            text-align: center;
             font-size: 24px;
             margin-bottom: 20px;
             color: var(--emerald);
