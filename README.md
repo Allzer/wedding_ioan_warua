@@ -2,6 +2,7 @@
 wedding.conf
 
 server {
+
     listen 80;
     server_name weddding.ru;  # Ваш IP-адрес
     location / {
@@ -14,6 +15,7 @@ server {
     proxy_connect_timeout 60s;
     proxy_read_timeout 90s;
     client_max_body_size 100M;
+    
 }
 
 sudo certbot --nginx -d weddding.ru --register-unsafely-without-email
